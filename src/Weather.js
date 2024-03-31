@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import Search from './Search'
+import './Weather.css'
 
 export default function Weather() {
     let [temperature, setTemperature] = useState(null)
@@ -30,20 +31,30 @@ export default function Weather() {
     if (temperature)
         return (
             <div>
-                <h1>Weather App</h1>
+                <h1>Solstice Sky</h1>
                 <Search setCity={setCity} handleSubmit={handleSubmit} />
-                <ul>
-                    <li>{temperature}C°</li>
-                    <li>{description}</li>
-                    <li>{humidity}%</li>
-                    <li>{wind}km/h</li>
-                </ul>
+                <div className="weather-info">
+                    <div className="box">
+                        <p className="city-name">{city}</p>
+                        <p className="temp">{temperature}°C</p>
+                        <p className="desc">{description}</p>
+                    </div>
+                    <div className="box">
+                        <div className="extra-info">
+                            <p className="wind">
+                                Wind: {wind} <strong>km/h</strong>
+                            </p>
+
+                            <p className="humidity">Humidity: {humidity}%</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
 
     return (
         <div>
-            <h1>Weather App</h1>
+            <h1>Solstice Sky</h1>
             <Search setCity={setCity} handleSubmit={handleSubmit} />
         </div>
     )

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Montserrat';
+}
+
+form {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 40%;
+    height: 20px;
+    margin: 2px;
+    font-family: 'Montserrat';
+    border-radius: 4px;
+}
+
+.search-btn {
+    margin: 2px;
+    background-color: rgb(124, 220, 201);
+    color: #fefefe;
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+}

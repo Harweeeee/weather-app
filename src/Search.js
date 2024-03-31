@@ -1,4 +1,5 @@
 import React from 'react'
+import './Search.css'
 
 export default function Search(props) {
     function updateCity(event) {
@@ -8,8 +9,13 @@ export default function Search(props) {
 
     return (
         <form onSubmit={props.handleSubmit}>
-            <input type="text" onChange={updateCity} />
-            <input type="submit" value="search" />
+            <input
+                className="input"
+                placeholder="Enter a city"
+                type="text"
+                onChange={updateCity}
+            />
+            <input className="search-btn" type="submit" value="search" />
         </form>
     )
 }
